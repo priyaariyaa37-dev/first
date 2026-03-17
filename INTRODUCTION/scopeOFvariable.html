@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>var vs let Scope</title>
+</head>
+<body>
+
+<script>
+  // Global scope
+  var globalVar = "I am a global var";
+  let globalLet = "I am a global let";
+
+  function checkScope() {
+    // Function (local) scope
+    var localVar = "I am a local var";
+    let localLet = "I am a local let";
+
+    console.log(globalVar); // ✅ Accessible
+    console.log(globalLet); // ✅ Accessible
+    console.log(localVar);  // ✅ Accessible
+    console.log(localLet);  // ✅ Accessible
+  }
+
+  checkScope();
+
+  console.log(globalVar); // ✅ Accessible
+  console.log(globalLet); // ✅ Accessible
+
+  console.log(localVar);  // ❌ Error: localVar is not defined
+  console.log(localLet);  // ❌ Error: localLet is not defined
+</script>
+
+</body>
+</html>

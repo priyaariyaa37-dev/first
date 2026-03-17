@@ -1,0 +1,25 @@
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic LI Example</title>
+</head>
+<body>
+  <h3>Add Items to List</h3>
+  <input type="text" id="itemInput" placeholder="Enter item">
+  <button onclick="addItem()">Add</button>
+  <ul id="itemList"></ul>
+
+  <script>
+    function addItem() {
+      const input = document.getElementById("itemInput");
+      const value = input.value.trim();
+      if (value === "") return;
+      const li = document.createElement("li");
+      li.textContent = value;
+      document.getElementById("itemList").appendChild(li);
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html>
